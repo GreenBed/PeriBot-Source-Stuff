@@ -1,4 +1,6 @@
 #This just keeps your bot alive.
+#Use with UptimeRobot
+
 from flask import Flask
 from threading import Thread
 
