@@ -42,7 +42,7 @@ def kik_login(username, password):
             kik_authenticated = True
 
         def on_chat_message_received(self, chat_message: chatting.IncomingChatMessage):
-            client.send_chat_message(chat_message.from_jid, "This bot does not have any commands on Kik (yet)!\nCheck me out on Discord, PeriBot#6551") #Replies "pong". Pretty simple
+            client.send_chat_message(chat_message.from_jid, "This bot does not have any commands on Kik (yet)!\nCheck me out on Discord, PeriBot#6551")
 
         def on_connection_failed(self, response: ConnectionFailedResponse):
             print("Kik login failed!")
@@ -64,17 +64,17 @@ def fetch_jid(given_username):
     def get_jid(given_username):
         global client
         try:
-            grab_jid = client.get_jid(given_username)  # Attempts to get the JID
+            grab_jid = client.get_jid(given_username)
             return grab_jid
         except:
             return False
     jid = get_jid(given_username)
     attempts = 1
-    while jid == False:  # if there was an problem getting the JID, this continues retrying until it works
-        if attempts > 5:  # Limits the number of attempts to fetch the JID to 5 so you don't get stuck in an error loop
+    while jid == False:
+        if attempts > 5:
             return False
         else:
-            jid = get_jid(given_username)  # Tries again
+            jid = get_jid(given_username)
             attempts = attempts + 1
     return jid
 
