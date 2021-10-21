@@ -37,7 +37,7 @@ def kik_login(username, password):
             client = KikClient(self, username, password)
 
         def on_authenticated(self):
-            print("Successfully logged in!")
+            print("Kik login successful!")
             global kik_authenticated
             kik_authenticated = True
 
