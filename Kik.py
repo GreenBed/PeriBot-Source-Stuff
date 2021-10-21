@@ -48,7 +48,7 @@ def kik_login(username, password):
             print("Kik login failed!")
 
         def on_login_error(self, login_error: LoginError):
-            print("Kik login failed! Probably a captcha.")
+            print("Kik login failed!")
 
     if __name__ == '__main__':
         main()
