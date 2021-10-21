@@ -90,3 +90,4 @@ async def on_message(message):
     step13 = step12.replace("'", "")
     await message.channel.send("Triggers for this group:\n" + emoji.emojize(step13))
     await message.channel.send("_(Keep in mind that **triggers** are stored as lowercase and **responses** are not.)_")
+client.run(token)
